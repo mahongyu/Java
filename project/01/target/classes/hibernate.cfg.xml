@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- 初始化JDBC连接 -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql:///hibernate</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!-- 方言 -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<!-- 数据库生成方式 -->
+		<property name="hbm2ddl.auto">update</property>  <!-- validate检测,create-drop删了重新创建,create重新建表,update表如果存在插数据，如果不存在建表插数据 -->
+		<!-- 打印sql -->
+		<property name="show_sql">true</property>
+		<!-- 格式化sql -->
+		<property name="format_sql">true</property>
+		<!-- 关联对象配置文件 -->
+		<mapping resource="com/uestc/Grade.hbm.xml"/>
+		<mapping resource="com/uestc/Student.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

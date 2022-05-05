@@ -1,0 +1,2 @@
+官网：hibernate.org/
+依赖：https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.5.5.Final 。 https://mvnrepository.com/artifact/org.hibernate/hibernate-core
